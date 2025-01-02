@@ -5,7 +5,7 @@ import apple from "../../assets/signup-icons/apple.png";
 
 const SocialSignUp = () => {
   return (
-    <div className="flex items-center justify-between w-full gap-[16px] px-[14px]">
+    <div className="flex items-center justify-between w-full gap-[16px] px-[14px] xl:px-0">
       <div className="social-boxes">
         <img src={github} alt="" className="h-[20px]" />
       </div>

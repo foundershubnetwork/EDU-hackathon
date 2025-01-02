@@ -7,8 +7,7 @@ const PersonalInformation = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     otp: "",
     password: "",
@@ -57,28 +56,14 @@ const PersonalInformation = () => {
         <div className="xl:flex xl:gap-[24px]">
           <div className="xl:flex-1">
             <p className="text-semibold text-[12px] xl:text-[14px] font-poppins text-purplesmalltext">
-              First name
+              Full name
             </p>
             <input
               type="text"
               name="firstName"
               placeholder="Enter your first name"
               className="personal-information-container"
-              value={userData.firstName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="xl:flex-1">
-            <p className="text-semibold text-[12px] xl:text-[14px] font-poppins text-purplesmalltext">
-              Last name
-            </p>
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Enter your last name"
-              className="personal-information-container"
-              value={userData.lastName}
+              value={userData.fullName}
               onChange={handleChange}
               required
             />

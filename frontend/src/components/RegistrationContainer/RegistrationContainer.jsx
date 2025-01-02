@@ -4,6 +4,7 @@ import Toggle from "../EntryFlip/Toggle";
 import LoginInformation from "./LoginInformation";
 import { useContext } from "react";
 import Context from "../../context/Context";
+import OCIDInt from "../OCIDInt/OCIDInt";
 
 const RegistrationContainer = () => {
   const { isLogin } = useContext(Context);
@@ -29,7 +30,8 @@ const RegistrationContainer = () => {
         <p className="text-[12px] text-white">OR</p>
         <div className="h-[1px] w-[25%] bg-purplestroke "></div>
       </div>
-      <div className="pb-[20px]">
+      <div className="pb-[20px] ">
+        <OCIDInt />
         <SocialSignUp />
       </div>
     </div>
