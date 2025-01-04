@@ -1,12 +1,14 @@
-import tick from "../../assets/standard-icons/tick.png";
 import { useState } from "react";
 import RememberTick from "../../UI/RememberTick";
+import eye from "../../assets/standard-icons/hide-pas.png";
+import crosseye from "../../assets/standard-icons/unhide-pas.png";
 
 const LoginInformation = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passCheck, setPassCheck] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   const checkPassword = (e) => {
     e.preventDefault(); // Prevent form submission
@@ -38,23 +40,31 @@ const LoginInformation = () => {
           <p className="text-semibold text-[12px] xl:text-[14px] font-poppins text-purplesmalltext">
             Password
           </p>
-          <input
-            type="password" // Use password input type
-            placeholder="Enter your password"
-            className={`${
-              passCheck
-                ? "personal-information-container"
-                : "personal-information-container-negative"
-            }`}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          {!passCheck && (
-            <p className="text-[12px] font-poppins text-redwarn mb-[12px]">
-              Incorrect Password or Email
-            </p>
-          )}
+          <div className="flex relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Enter your password"
+              className={`${
+                passCheck
+                  ? "personal-information-container"
+                  : "personal-information-container-negative"
+              }`}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <div
+              className="absolute top-[18px] right-[10px] cursor pointer w-6 h-5 px-[2px] flex items-center bg-purpledark cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              <img src={showPassword ? crosseye : eye} alt="eye-icon" />
+            </div>
+            {!passCheck && (
+              <p className="text-[12px] font-poppins text-redwarn mb-[12px]">
+                Incorrect Password or Email
+              </p>
+            )}
+          </div>
 
           {/* Forgot Password */}
           <div className="flex justify-end mb-[16px]">

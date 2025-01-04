@@ -31,8 +31,8 @@ const RegistrationContainer = () => {
         <div className="h-[1px] w-[25%] bg-purplestroke "></div>
       </div>
       <div className="pb-[20px] ">
-        <OCIDInt />
         <SocialSignUp />
+        <OCIDInt />
       </div>
     </div>
   );

@@ -26,9 +26,8 @@ export default {
         yellowverf: "#FFC300",
         greenverf: "#00FF08",
         redwarn: "#FF0000",
-        blueocidp1: "#4477CE",
+        blueocidp1: "#1F509A",
         blueocidp2: "#4C3BCF",
-        blueocid3: "#00EDBE",
       },
       letterSpacing: {
         otpwide: "0.2em",
