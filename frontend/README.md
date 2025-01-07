@@ -4,6 +4,8 @@ This is the onboarding frontend code for Founders Hub Network , Here users can s
 Or they can directly get onboarded by creating ***Open campus ID*** .
 This is the submission for hackathon of FoundersHub Networks's Idea of Integrating ***Open campus ID** or ***edu*** to facilitate working with the ***EDU chain***.
 
+This code showcases the integration of connect Open Campus ID into the FHN app , made with help of official OC-id connect js Repository (https://github.com/opencampus-xyz/ocid-connect-js)
+
 ## Getting Started
 
 Follow these instructions to set up and run the project locally.
